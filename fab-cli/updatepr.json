@@ -1,0 +1,11 @@
+{
+  "workspaceHead": "fd73856ee805b7292defdf7f9834aae2928bf455",
+  "remoteCommitHash": "4a96242830c3254b3000eb6127f15614d8c67e6e",
+  "conflictResolution": {
+    "conflictResolutionType": "Workspace",
+    "conflictResolutionPolicy": "PreferRemote"
+  },
+  "options": {
+    "allowOverrideItems": true
+  }
+}

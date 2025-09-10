@@ -1,0 +1,23 @@
+{
+  "displayName": "adoconnfromcli",
+  "connectivityType": "ShareableCloud",
+  "connectionDetails": {
+    "creationMethod": "AzureDevOpsSourceControl.Contents",
+    "type": "AzureDevOpsSourceControl",
+    "parameters": [
+     {
+      "dataType": "Text",
+      "name": "url",
+      "value": "https://dev.azure.com/potterorg/tests/_git/fabcon2025"
+     }
+    ]
+  },
+  "credentialDetails": {
+    "credentials": {
+      "credentialType": "ServicePrincipal",
+      "tenantId": "<>",
+      "servicePrincipalClientId": "<>",
+      "servicePrincipalSecret": "<>"
+    }
+  }
+}

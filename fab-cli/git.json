@@ -1,0 +1,14 @@
+{
+  "gitProviderDetails": {
+    "organizationName": "potterorg",
+    "projectName": "tests",
+    "gitProviderType": "AzureDevOps",
+    "repositoryName": "fabcon2025",
+    "branchName": "main",
+    "directoryName": "/"
+  },
+  "myGitCredentials": {
+    "source": "ConfiguredConnection",
+    "connectionId": "d01081d1-a175-4308-a044-61c4f95bdb7b"
+  }
+}
