@@ -43,17 +43,19 @@ resource "fabric_workspace_git" "azdo" {
     project_name      = "Fabric"
     repository_name   = "fabric1"
     branch_name       = "main"
-    directory_name    = "/ExampleDirectory"
+    directory_name    = "/"
   }
   git_credentials = {
+    source        = "ConfiguredConnection"
     connection_id = fabric_connection.ado_terraform_conn.id
   }
 }
-#resource "fabric_workspace_role_assignment" "example" {
-#  workspace_id = fabric_workspace.example_workspace.id
-#  principal = {
-#    id   = var.contributor_user_principal_id
-#    type = "User"
-#  }
-#  role = "Contributor"
-#}
+
+resource "fabric_workspace_role_assignment" "example" {
+  workspace_id = fabric_workspace.example_workspace.id
+  principal = {
+    id   = var.contributor_user_principal_id
+    type = "User"
+  }
+  role = "Contributor"
+}
