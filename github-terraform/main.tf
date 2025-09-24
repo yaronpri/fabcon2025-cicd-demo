@@ -31,7 +31,7 @@ resource "fabric_workspace" "example_workspace" {
   capacity_id = data.fabric_capacity.capacity.id
 }
 
-resource "fabric_workspace_git" "azdo" {
+resource "fabric_workspace_git" "github" {
   workspace_id            = fabric_workspace.example_workspace.id
   initialization_strategy = "PreferRemote"
   git_provider_details = {
