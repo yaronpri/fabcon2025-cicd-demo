@@ -1,4 +1,4 @@
-# fabcon2025-cicd-demo
+# fabcon2025-cicd-demo-bug
 This repo represent the Cross-tenant CI-CD automation session for FabCon Vienna 2025.
 
 
