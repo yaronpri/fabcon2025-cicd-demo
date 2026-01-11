@@ -1,0 +1,14 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/variableLibrary/definition/valueSet/1.0.0/schema.json",
+  "name": "dev",
+  "variableOverrides": [
+    {
+      "name": "datasource",
+      "value": "356f8f3d-ce54-48ab-9f55-f578281fa636"
+    },
+    {
+      "name": "datasourceFolderName",
+      "value": "publicholidays"
+    }
+  ]
+}

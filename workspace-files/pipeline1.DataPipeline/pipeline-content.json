@@ -1,0 +1,98 @@
+{
+  "properties": {
+    "activities": [
+      {
+        "type": "Copy",
+        "typeProperties": {
+          "source": {
+            "type": "LakehouseTableSource",
+            "datasetSettings": {
+              "type": "LakehouseTable",
+              "typeProperties": {
+                "table": {
+                  "value": "@pipeline().libraryVariables.goldVariableLibrary_datasourceFolderName",
+                  "type": "Expression"
+                }
+              },
+              "schema": [],
+              "linkedService": {
+                "name": "7192887c_cc8e_42d9_bc4e_9403d8814eae",
+                "properties": {
+                  "type": "Lakehouse",
+                  "typeProperties": {
+                    "artifactId": "@pipeline().libraryVariables.goldVariableLibrary_datasource",
+                    "workspaceId": "@pipeline().libraryVariables.goldVariableLibrary_datasourceWSId",
+                    "rootFolder": "Tables"
+                  },
+                  "annotations": []
+                }
+              },
+              "annotations": []
+            }
+          },
+          "sink": {
+            "type": "LakehouseTableSink",
+            "tableActionOption": "OverwriteSchema",
+            "partitionOption": "None",
+            "applyVOrder": true,
+            "datasetSettings": {
+              "type": "LakehouseTable",
+              "typeProperties": {
+                "table": "copyData"
+              },
+              "schema": [],
+              "linkedService": {
+                "name": "destLakehouse",
+                "properties": {
+                  "type": "Lakehouse",
+                  "typeProperties": {
+                    "artifactId": "533315ff-5c06-9672-405b-bc27a8e51ee9",
+                    "workspaceId": "00000000-0000-0000-0000-000000000000",
+                    "rootFolder": "Tables"
+                  },
+                  "annotations": []
+                }
+              },
+              "annotations": []
+            }
+          },
+          "translator": {
+            "type": "TabularTranslator",
+            "typeConversion": true,
+            "typeConversionSettings": {
+              "allowDataTruncation": true,
+              "treatBooleanAsNumber": false
+            }
+          },
+          "enableStaging": false
+        },
+        "policy": {
+          "timeout": "0.12:00:00",
+          "retry": 0,
+          "retryIntervalInSeconds": 30,
+          "secureInput": false,
+          "secureOutput": false
+        },
+        "name": "Copy data1",
+        "dependsOn": []
+      }
+    ],
+    "libraryVariables": {
+      "goldVariableLibrary_datasource": {
+        "type": "String",
+        "variableName": "datasource",
+        "libraryName": "goldVariableLibrary"
+      },
+      "goldVariableLibrary_datasourceWSId": {
+        "type": "String",
+        "variableName": "datasourceWSId",
+        "libraryName": "goldVariableLibrary"
+      },
+      "goldVariableLibrary_datasourceFolderName": {
+        "type": "String",
+        "variableName": "datasourceFolderName",
+        "libraryName": "goldVariableLibrary"
+      }
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/variableLibrary/definition/valueSet/1.0.0/schema.json",
+  "name": "test",
+  "variableOverrides": [
+    {
+      "name": "datasource",
+      "value": "b656dbd9-fea9-4cac-9004-b340b239b971"
+    },
+    {
+      "name": "datasourceFolderName",
+      "value": "dimension_city"
+    }
+  ]
+}

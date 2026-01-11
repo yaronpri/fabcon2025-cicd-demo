@@ -1,0 +1,23 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/variableLibrary/definition/variables/1.0.0/schema.json",
+  "variables": [
+    {
+      "name": "datasource",
+      "note": "",
+      "type": "String",
+      "value": "2cceca82-ef13-4917-9b29-b67a930e0cab"
+    },
+    {
+      "name": "datasourceWSId",
+      "note": "",
+      "type": "String",
+      "value": "5599998d-9988-46bb-98c3-7955244a49b2"
+    },
+    {
+      "name": "datasourceFolderName",
+      "note": "",
+      "type": "String",
+      "value": "green_tripdata_2022"
+    }
+  ]
+}
