@@ -48,3 +48,4 @@ terraform.rc
 *test*-results*.xml
 
 **/.task/*
+.DS_Store
