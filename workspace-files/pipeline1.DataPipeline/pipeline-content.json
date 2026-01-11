@@ -16,7 +16,7 @@
               },
               "schema": [],
               "linkedService": {
-                "name": "7192887c_cc8e_42d9_bc4e_9403d8814eae",
+                "name": "ef90dd8b_e1b9_4ba4_ba5d_8995701dbae4",
                 "properties": {
                   "type": "Lakehouse",
                   "typeProperties": {
@@ -73,7 +73,7 @@
           "secureInput": false,
           "secureOutput": false
         },
-        "name": "Copy data1",
+        "name": "Copy data11",
         "dependsOn": []
       }
     ],
