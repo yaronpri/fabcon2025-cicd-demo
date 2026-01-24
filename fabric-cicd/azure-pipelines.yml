@@ -1,0 +1,29 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- none
+
+stages:
+  - stage: Build_Release
+    jobs:
+      - job: Build
+        pool: default
+        steps:
+        - checkout: self
+        - script: |
+            sudo apt-get update
+            sudo apt-get install -y software-properties-common curl build-essential
+            sudo add-apt-repository ppa:deadsnakes/ppa -y
+            sudo apt-get update
+            sudo apt-get install -y python3.12 python3.12-venv python3.12-dev
+            curl -sS https://bootstrap.pypa.io/get-pip.py -o /tmp/get-pip.py
+            sudo python3.12 /tmp/get-pip.py
+            sudo python3.12 -m pip install --upgrade pip setuptools wheel
+            python3.12 -m pip install fabric-cicd azure-identity
+          displayName: 'Install Python 3.12, fabric ci-cd and azure-identity'
+        - script: |
+            python3.12 -u $(System.DefaultWorkingDirectory)/deploy-to-fabric.py --workspace_name "summit2026-test" --repository_directory "$(System.DefaultWorkingDirectory)/summit2026" --environment "test"
+          displayName: 'Deploy summit2026-main to summit2026-test'
